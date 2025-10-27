@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Portfolio — Starter</title>
+  <style>
+    :root{--accent:#0f62fe;--bg:#f6f8fb;--card:#ffffff;--muted:#6b7280}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#0f172a}
+    header{background:linear-gradient(90deg,#081a4b 0%, #0f2a6b 100%);color:#fff;padding:28px 20px}
+    .container{max-width:1000px;margin:20px auto;padding:0 18px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .brand h1{margin:0;font-size:20px}
+    .hero{display:flex;gap:24px;align-items:center;justify-content:space-between;margin-top:18px}
+    .hero .intro{max-width:64%}
+    .badge{background:rgba(255,255,255,0.08);padding:6px 10px;border-radius:10px;font-size:13px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .project-title{display:flex;justify-content:space-between;align-items:center}
+    .project-meta{color:var(--muted);font-size:13px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    .muted{color:var(--muted)}
+    .section{margin-top:18px}
+    .list{margin:12px 0;padding-left:18px}
+    .codebox{background:#0b1220;color:#cfe8ff;padding:12px;border-radius:8px;font-family:monospace;font-size:13px}
+    .screenshot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    img{max-width:100%;border-radius:8px}
+    footer{max-width:1000px;margin:36px auto;padding:18px;color:var(--muted);font-size:14px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.hero{flex-direction:column}.hero .intro{max-width:100%}.screenshot-grid{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div>
+          <h1>Project Portfolio — Starter</h1>
+          <div class="muted">Clean single-file template based on your uploaded PDF</div>
+        </div>
+        <div style="margin-left:auto">
+          <span class="badge">Simple • Responsive • Single-file</span>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="intro">
+          <div style="display:flex;align-items:center;gap:14px">
+            <div class="card" style="padding:12px">
+              <strong>Student / Owner</strong>
+              <div class="muted">Replace with your name • Roll / ID • College</div>
+            </div>
+            <div style="min-width:8px"></div>
+          </div>
+          <div class="section">
+            <div class="card">
+              <div class="project-title">
+                <div>
+                  <h2 style="margin:0">Store Sales Record Management System</h2>
+                  <div class="project-meta">Phase: 5 — AngularJS with SQL Integration</div>
+                </div>
+                <div>
+                  <a class="btn" href="#repo" onclick="copyRepo()">Copy Repo Link</a>
+                </div>
+              </div>
+              <p class="muted">A demo full-stack project demonstrating AngularJS frontend and SQL backend with CRUD, authentication and reports.</p>
+
+              <div class="section">
+                <strong>Quick demo walkthrough</strong>
+                <ol class="list">
+                  <li>Login page: Admin authentication</li>
+                  <li>Sales: Add / Edit / Delete sales, reports (graphs)</li>
+                  <li>Customers: CRUD for customers</li>
+                  <li>Products: CRUD for products</li>
+                </ol>
+              </div>
+
+              <div class="section">
+                <strong>Setup (local)</strong>
+                <div class="codebox">git clone &lt;repo&gt;  &amp;&amp; npm install  &amp;&amp; npm start</div>
+                <div style="margin-top:8px;color:var(--muted)">Backend: Node.js + Express + MySQL (example). Update DB creds in config.</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div style="width:320px">
+          <div class="card">
+            <strong>Project Info</strong>
+            <div class="muted" style="margin-top:8px">College: University College of Engineering, Nagercoil (replace)</div>
+            <div class="muted">Student ID / Roll: replace</div>
+            <div style="margin-top:12px"><a class="btn" href="#contact">Contact</a></div>
+          </div>
+
+          <div class="card section">
+            <strong>Repository</strong>
+            <div id="repo" class="muted" style="margin-top:8px">https://github.com/your-repo</div>
+            <div style="margin-top:8px">
+              <button class="btn" onclick="copyRepo()">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card section">
+      <h3 style="margin-top:0">Project Report — Summary</h3>
+      <p class="muted">This project integrates AngularJS frontend with a SQL-based backend providing secure login, CRUD operations and graphical reports. The structure below follows the PDF you uploaded and is easy to expand for multiple projects.</p>
+
+      <div class="section">
+        <h4>Features</h4>
+        <ul class="list">
+          <li>Login & authentication</li>
+          <li>CRUD for Sales, Customers, Products</li>
+          <li>Sales report with charts</li>
+          <li>Form validation and security best-practices</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h4>Database design</h4>
+        <div class="muted">Users, Sales, Customers, Products. Provide SQL schema file in repo.</div>
+      </div>
+
+      <div class="section">
+        <h4>Challenges & Solutions</h4>
+        <ol class="list">
+          <li>Frontend-backend communication — used $http and clear REST endpoints.</li>
+          <li>SQL injection — parameterized queries / prepared statements.</li>
+          <li>Form validation — AngularJS directives + server-side validation.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="card section">
+      <h3>Screenshots (placeholder)</h3>
+      <div class="screenshot-grid" id="screenshots">
+        <img src="https://placehold.co/600x400?text=Login+Page" alt="s1">
+        <img src="https://placehold.co/600x400?text=Sales+Page" alt="s2">
+        <img src="https://placehold.co/600x400?text=Customers+Page" alt="s3">
+      </div>
+    </section>
+
+    <section class="card section">
+      <h3>Full Setup Guide (expanded)</h3>
+      <ol class="list">
+        <li>Clone repo and install dependencies.</li>
+        <li>Create SQL database and import schema (schema.sql).</li>
+        <li>Configure DB credentials in backend config or .env.</li>
+        <li>Start backend (node server.js or npm start) and open frontend.</li>
+      </ol>
+    </section>
+
+    <section class="card section" id="contact">
+      <h3>Contact / Publish</h3>
+      <p class="muted">Replace with your email / phone / LinkedIn. To publish the site, upload this single HTML file to any static host (Netlify, GitHub Pages) or serve it from your project repo.</p>
+      <div style="margin-top:12px">
+        <label class="muted">Your email</label>
+        <input id="email" placeholder="you@example.com" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e9ef">
+        <div style="margin-top:10px">
+          <button class="btn" onclick="alert('Thanks! Update the HTML with your contact details.')">Save</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built from your PDF example. Edit the HTML to add more projects or tweak layout. Want a React/Tailwind version? Tell me and I will generate it.
+  </footer>
+
+  <script>
+    function copyRepo(){
+      const repo = document.getElementById('repo').innerText || 'https://github.com/your-repo';
+      navigator.clipboard?.writeText(repo).then(()=>{alert('Repo link copied')}).catch(()=>{prompt('Copy this link',repo)});
+    }
+  </script>
+</body>
+</html>
+
+</html>
